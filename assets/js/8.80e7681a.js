@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{206:function(t,e,l){"use strict";l.r(e);var n=l(0),s=Object(n.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("ol",[e("li",[this._v("全称： Model-View-ViewModel")])])])}),[],!1,null,null,null);e.default=s.exports}}]);
