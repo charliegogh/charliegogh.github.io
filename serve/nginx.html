@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx 相关配置 | charlie</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.6114eb0d.css" as="style"><link rel="preload" href="/assets/js/app.8da63cab.js" as="script"><link rel="preload" href="/assets/js/2.a86293ef.js" as="script"><link rel="preload" href="/assets/js/16.fefaa3e9.js" as="script"><link rel="prefetch" href="/assets/js/10.db34646d.js"><link rel="prefetch" href="/assets/js/11.e8670e7d.js"><link rel="prefetch" href="/assets/js/12.d81148ec.js"><link rel="prefetch" href="/assets/js/13.e315f916.js"><link rel="prefetch" href="/assets/js/14.546b02c6.js"><link rel="prefetch" href="/assets/js/15.d57d1cbf.js"><link rel="prefetch" href="/assets/js/17.dfb3ad2e.js"><link rel="prefetch" href="/assets/js/18.0b50892b.js"><link rel="prefetch" href="/assets/js/19.2000e9d1.js"><link rel="prefetch" href="/assets/js/20.e9261369.js"><link rel="prefetch" href="/assets/js/21.382214ab.js"><link rel="prefetch" href="/assets/js/22.2275c779.js"><link rel="prefetch" href="/assets/js/23.879b4a98.js"><link rel="prefetch" href="/assets/js/24.0f6df61d.js"><link rel="prefetch" href="/assets/js/25.79c8b11b.js"><link rel="prefetch" href="/assets/js/26.3dc063ea.js"><link rel="prefetch" href="/assets/js/27.3db7b1d8.js"><link rel="prefetch" href="/assets/js/28.3c05d0df.js"><link rel="prefetch" href="/assets/js/29.b99ee293.js"><link rel="prefetch" href="/assets/js/3.fffc852d.js"><link rel="prefetch" href="/assets/js/30.ec9007f8.js"><link rel="prefetch" href="/assets/js/31.f9e84523.js"><link rel="prefetch" href="/assets/js/32.08a0bf2d.js"><link rel="prefetch" href="/assets/js/33.d776f9c9.js"><link rel="prefetch" href="/assets/js/34.007f94f8.js"><link rel="prefetch" href="/assets/js/35.e9249814.js"><link rel="prefetch" href="/assets/js/36.fd088afd.js"><link rel="prefetch" href="/assets/js/37.ba40705e.js"><link rel="prefetch" href="/assets/js/38.c27b101c.js"><link rel="prefetch" href="/assets/js/39.a8d27a48.js"><link rel="prefetch" href="/assets/js/4.3b5055dc.js"><link rel="prefetch" href="/assets/js/40.362b1a6f.js"><link rel="prefetch" href="/assets/js/41.df57908d.js"><link rel="prefetch" href="/assets/js/42.22c2f735.js"><link rel="prefetch" href="/assets/js/43.41129cd7.js"><link rel="prefetch" href="/assets/js/44.0b567cb6.js"><link rel="prefetch" href="/assets/js/45.f9564bad.js"><link rel="prefetch" href="/assets/js/46.8a677c08.js"><link rel="prefetch" href="/assets/js/47.42a641fb.js"><link rel="prefetch" href="/assets/js/48.2900ea15.js"><link rel="prefetch" href="/assets/js/49.ac91ed6d.js"><link rel="prefetch" href="/assets/js/5.92919a4c.js"><link rel="prefetch" href="/assets/js/50.6499f315.js"><link rel="prefetch" href="/assets/js/51.9df3630f.js"><link rel="prefetch" href="/assets/js/52.caed8e9f.js"><link rel="prefetch" href="/assets/js/53.f02fba55.js"><link rel="prefetch" href="/assets/js/54.3c7cfe2c.js"><link rel="prefetch" href="/assets/js/55.8151a345.js"><link rel="prefetch" href="/assets/js/56.7caf2a6b.js"><link rel="prefetch" href="/assets/js/57.f4dcd123.js"><link rel="prefetch" href="/assets/js/6.6641fc33.js"><link rel="prefetch" href="/assets/js/7.c18d910c.js"><link rel="prefetch" href="/assets/js/8.6bc8aacd.js"><link rel="prefetch" href="/assets/js/9.2907d1d2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6114eb0d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">charlie</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Serve</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/serve/nginx.html" class="active sidebar-link">nginx 相关配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/serve/nginx.html#官网" class="sidebar-link">官网</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#配置环境" class="sidebar-link">配置环境</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#快速搭建nginx" class="sidebar-link">快速搭建nginx</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#基本的文件配置" class="sidebar-link">基本的文件配置</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#自定义错误页面和访问设置" class="sidebar-link">自定义错误页面和访问设置</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#权限问题" class="sidebar-link">权限问题</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#反向代理" class="sidebar-link">反向代理</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#虚拟主机" class="sidebar-link">虚拟主机</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#适配pc和移动设备" class="sidebar-link">适配pc和移动设备</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#gzip压缩的设置" class="sidebar-link">gzip压缩的设置</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#node安装" class="sidebar-link">node安装</a></li><li class="sidebar-sub-header"><a href="/serve/nginx.html#使用域名设置虚拟主机" class="sidebar-link">使用域名设置虚拟主机</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>兼容汇总</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nginx-相关配置"><a href="#nginx-相关配置" class="header-anchor">#</a> nginx 相关配置</h1> <h2 id="官网"><a href="#官网" class="header-anchor">#</a> 官网</h2> <p><a href="nginx.org">官网</a> <a href="https://mp.weixin.qq.com/s/J14CrLs5OfetO6AcUT3kjQ" target="_blank" rel="noopener noreferrer">nginx 反向代理和负载均衡策略实战案例<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="配置环境"><a href="#配置环境" class="header-anchor">#</a> 配置环境</h2> <ul><li>系统环境:centOS</li> <li>用yum进行安装必要程序</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    yum -y install gcc gcc-c++ autoconf pcre-devel make automake
+    yum -y install wget httpd-tools vim
+</code></pre></div><h2 id="快速搭建nginx"><a href="#快速搭建nginx" class="header-anchor">#</a> 快速搭建nginx</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <ol><li>查看yum是否存在:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>yum list | grep nginx
+</code></pre></div><ol start="2"><li>使用需求的yum版本</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vim /etc/yum.repos.d/nginx.repo
+</code></pre></div><ol start="3"><li>终端输入nginx官网提供的源,注意设置对应的系统和版本号</li></ol> <div class="language- extra-class"><pre class="language-text"><code>[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+
+yum install nginx 
+</code></pre></div><h2 id="基本的文件配置"><a href="#基本的文件配置" class="header-anchor">#</a> 基本的文件配置</h2> <h3 id="查看nginx安装目录"><a href="#查看nginx安装目录" class="header-anchor">#</a> 查看nginx安装目录:</h3> <div class="language- extra-class"><pre class="language-text"><code> rpm -ql nginx   
+</code></pre></div><p>nginx.conf为nginx总的配置文件，搭建服务器需要经常去调整</p> <h3 id="服务器启动、停止、重启"><a href="#服务器启动、停止、重启" class="header-anchor">#</a> 服务器启动、停止、重启</h3> <ul><li>centos7版本中直接去使用nginx启动服务</li> <li>使用systemctl命令启动:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>systemctl start nginx.service
+</code></pre></div><h4 id="查询nginx是否被启动"><a href="#查询nginx是否被启动" class="header-anchor">#</a> 查询nginx是否被启动</h4> <div class="language- extra-class"><pre class="language-text"><code>ps aux | grep nginx
+</code></pre></div><h4 id="停止nginx"><a href="#停止nginx" class="header-anchor">#</a> 停止nginx</h4> <ol><li>立即停止服务</li></ol> <div class="language- extra-class"><pre class="language-text"><code>nginx  -s stop
+</code></pre></div><ol start="2"><li>从容停止服务</li></ol> <div class="language- extra-class"><pre class="language-text"><code>nginx -s quit
+</code></pre></div><ol start="3"><li>killall 方法杀死进程</li></ol> <div class="language- extra-class"><pre class="language-text"><code>killall nginx
+</code></pre></div><ol start="4"><li>systemctl 停止</li></ol> <div class="language- extra-class"><pre class="language-text"><code>systemctl stop nginx.service
+</code></pre></div><h4 id="重启"><a href="#重启" class="header-anchor">#</a> 重启</h4> <div class="language- extra-class"><pre class="language-text"><code>systemctl restart nginx.service
+</code></pre></div><h4 id="重新载入配置文件"><a href="#重新载入配置文件" class="header-anchor">#</a> 重新载入配置文件</h4> <p>重新编写或修改nginx配置文件后进行重新载入</p> <div class="language- extra-class"><pre class="language-text"><code>nginx -s reload
+</code></pre></div><h2 id="自定义错误页面和访问设置"><a href="#自定义错误页面和访问设置" class="header-anchor">#</a> 自定义错误页面和访问设置</h2> <p>类别:多错误指向一个页面
+把错误码换成一个地址:</p> <div class="language- extra-class"><pre class="language-text"><code>error_page  404 http://xxx;
+</code></pre></div><h3 id="访问控制"><a href="#访问控制" class="header-anchor">#</a> 访问控制</h3> <p>只允许特定主机访问</p> <div class="language- extra-class"><pre class="language-text"><code> location / {
+        deny   123.9.51.42;
+        allow  45.76.202.231;
+    }
+</code></pre></div><h2 id="权限问题"><a href="#权限问题" class="header-anchor">#</a> 权限问题</h2> <h3 id="指令的优先级"><a href="#指令的优先级" class="header-anchor">#</a> 指令的优先级</h3> <p>先出现的设置会覆盖后出现的设置</p> <h3 id="复杂访问控制权限匹配"><a href="#复杂访问控制权限匹配" class="header-anchor">#</a> 复杂访问控制权限匹配</h3> <p>设置需求：对网站下的图片目录可以去访问，对于admin目录则只允许公司内部固定IP去访问</p> <h3 id="详细配置"><a href="#详细配置" class="header-anchor">#</a> 详细配置</h3> <div class="language- extra-class"><pre class="language-text"><code>location =/img{
+        allow all;
+    }
+    location =/admin{
+        deny all;
+    }
+= 代表精确匹配
+</code></pre></div><h2 id="反向代理"><a href="#反向代理" class="header-anchor">#</a> 反向代理</h2> <blockquote><p>在C端和S端增加提供特定功能的服务器，即为代理服务器</p></blockquote> <h3 id="理解正向代理"><a href="#理解正向代理" class="header-anchor">#</a> 理解正向代理</h3> <p>最典型的正向代理工具:翻墙工具</p> <ul><li>原理:把不让访问的服务器代理到一个可以访问该网站的代理服务器上
+一般叫做proxy服务器 再去转发给客户</li></ul> <h3 id="理解反向代理"><a href="#理解反向代理" class="header-anchor">#</a> 理解反向代理</h3> <ul><li>原理：客户端发送的请求，想要去访问sever服务器上的内容，发送的内容被发送到代理
+服务器上，这个代理服务器再把请求发送到自己设置好的内部服务器上，用户真实获得
+的内容就在这些设置好的服务器上。</li></ul> <h4 id="设置反向代理"><a href="#设置反向代理" class="header-anchor">#</a> 设置反向代理</h4> <div class="language- extra-class"><pre class="language-text"><code>server{
+        listen 80;
+        server_name nginx2.jspang.com;
+        location / {
+               proxy_pass http://jspang.com;
+        }
+}
+</code></pre></div><h2 id="虚拟主机"><a href="#虚拟主机" class="header-anchor">#</a> 虚拟主机</h2> <ul><li>原理：一台物理主机划分多个磁盘空间，每个磁盘空间都是一个虚拟主机，每台虚拟主机都可以提供web服务，互补干扰。</li> <li>结果：用户可以利用虚拟主机把多个不同域名的网站部署到同一台服务器上。</li> <li>基于端口号配置虚拟主机</li></ul> <h2 id="适配pc和移动设备"><a href="#适配pc和移动设备" class="header-anchor">#</a> 适配pc和移动设备</h2> <div class="language- extra-class"><pre class="language-text"><code>    root /usr/share/nginx/pc;
+    if ($http_user_agent ~* '(Android|webOS|iPhone|iPod|BlackBerry)') {
+    root /usr/share/nginx/mobile;
+    }
+    index index.html;
+</code></pre></div><p>$http_user_agent的使用：可获取到请求客户端的userAgent</p> <h2 id="gzip压缩的设置"><a href="#gzip压缩的设置" class="header-anchor">#</a> gzip压缩的设置</h2> <p>经过gzip压缩之后，页面大小会变成原来的30%甚至更小,需要浏览器和服务器的同时支持</p> <ul><li>简单配置:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    gzip  on; # 开启压缩 
+    gzip_types text/plain application/javascript text/css;
+</code></pre></div><h2 id="node安装"><a href="#node安装" class="header-anchor">#</a> node安装</h2> <ul><li>安装:yum install nodejs</li> <li>更新:npm install -g n</li></ul> <h2 id="使用域名设置虚拟主机"><a href="#使用域名设置虚拟主机" class="header-anchor">#</a> 使用域名设置虚拟主机</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/常用方法/获取各种高度.html" class="prev">获取dom各种高度</a></span> <span class="next"><a href="/vue/article.html">article</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8da63cab.js" defer></script><script src="/assets/js/2.a86293ef.js" defer></script><script src="/assets/js/16.fefaa3e9.js" defer></script>
+  </body>
+</html>
