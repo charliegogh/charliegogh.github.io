@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    getLocation()
+    //使用HTML5地理定位
+    function getLocation(){
+
+        //检测浏览器是否支持地理定位
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+            //如果getCurrentPosition()运行成功，则向参数showPosition中规定的函数返回一个coordinates对象
+            //getCurrentPosition()方法的第二个参数showError用于处理错误。它规定当获取用户位置失败时运行的函数
+        }else{
+            alert("该设备浏览器不支持地理定位");
+        }
+
+    }
+
+    function showPosition(position){
+        console.log(position);
+        var Longitude=position.coords.longitude;//HTML5定位获取的经度
+        var Latitude=position.coords.latitude;//HTML5定位获取的纬度
+
+    }
+
+    function showError(error){
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                alert("用户不允许地理定位")
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("无法获取当前位置")
+                break;
+            case error.TIMEOUT:
+                alert("操作超时")
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("未知错误")
+                break;
+        }
+    }
+
+</script>
+</html>
+

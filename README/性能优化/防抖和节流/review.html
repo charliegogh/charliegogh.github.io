@@ -1,0 +1,35 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-08 20:44:57
+ * @LastEditTime : 2020-02-08 20:48:46
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \lib\README\性能优化\防抖和节流\review.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+</body>
+<script>    
+    let input = document.getElementById('input')
+    function debounce(){
+        let timer = null
+        return (...args)=>{
+            clearTimeout(timer)
+            timer = window.setTimeout(()=>{
+                fn().apply(this,args)
+            },delay)
+        }
+    }
+    
+
+
+
+</script>
+</html>

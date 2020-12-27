@@ -1,0 +1,67 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-06 20:06:44
+ * @LastEditTime : 2020-02-08 00:43:58
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \lib\README\interview\防抖和节流\index.html
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="button" id="btn">
+</body>
+<script>
+    /*节流函数*/
+    function debounce(fn, delay) {
+        var _this = this;
+
+        var timer = null;
+        return function () {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            clearTimeout(timer);
+            timer = window.setTimeout(function () {
+                fn.apply(_this, args);
+            }, delay);
+        };
+    }
+    var input1 = document.getElementById('input1')
+    var fn =debounce(function(e){
+        console.log(e.target.value)
+    },1000)
+    input1.addEventListener('input',fn)
+
+    // 节流:规定单位时间内只触发一次函数,如果在单位时间内触发多次函数,只有一次生效   防止重复提交
+    //     function throttle(fn,delay){
+    //         let timer = null
+    //         let flag = true // 中间媒介 判断是否在单位时间内触发
+    //         return (...args)=>{
+    //             if (!flag) return
+    //             clearTimeout(timer)
+    //             flag = false;
+    //             timer = setTimeout(()=>{
+    //                 fn.apply(this,args)
+    //                 flag = true
+    //             },delay)
+    //     }
+    //     }
+    //     let input1 = document.getElementById('input1')
+    //     let btn = document.getElementById('btn')
+    //     let fn =throttle(function(e){
+    //         console.log(1);
+    //
+    //         // console.log('节流成功',e.target.value)
+    //     },1000)
+    //     input1.addEventListener('input',fn)
+    //     btn.addEventListener('click',fn)
+</script>
+</html>

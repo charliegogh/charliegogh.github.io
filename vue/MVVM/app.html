@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        {{name}}
+    </div>
+</body>
+<script src="mvvm.js"></script>
+<script>
+    let mvvm=new Mvvm({
+        el:'#app',
+        data:{
+            name:'charlie',
+            like:{
+                name:'code',
+            }
+        }
+    })
+    // console.log(mvvm.name);  // get
+    mvvm.name='hah' // set
+    // console.log(mvvm.name);
+</script>
+</html>
