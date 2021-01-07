@@ -1,13 +1,32 @@
 # timeLine
 
+## 202101
+
+### 0103
+
+1. slice() 数组截取问题
+
+
+### 0107 
+
+1. echarts柱状图和折线混合情况，折线出现偏移问题
+
+- 添加配置项
+``` javascript
+series: [ { name: 'xxxx', barGap: '-100%'
+    }
+]
+```
+
+
+
+
+
 ## 11
 
 ### 1107
 > 09点56分
 - [table设置tr border失效](https://blog.csdn.net/u010533511/article/details/51097150)
-
-> 10点48分 
-- [echarts修改下载图标大小](https://github.com/apache/incubator-echarts/issues/8327)
 
 > 14点04分
 - [script-loader在全局执行脚本](https://www.webpackjs.com/loaders/script-loader/)
@@ -20,16 +39,6 @@
 // y: 结束位置  到底部y可以获取页面整体高度 或者元素高度
 ```
     
-
-### 1120
-
-> linux 安装node
-
-```
-sudo yum install epel-release
-sudo yum install nodejs
-```
-
 ### 1201
 
 - [JS 中对 URL 进行转码与解码](https://www.cnblogs.com/lvmylife/p/7595036.html)
@@ -63,16 +72,3 @@ sudo yum install nodejs
 
 js引擎中提供了一个eval函数以用于运行js代码，但是需要解析的json数据并不能保证安全甚至可以被恶意篡改，为避免这种情况的出现，
 可使用js提供的JSON.parse() 和json.stringify函数进行解码。
-
-### 1234
-
-
-
-
-
-
-## 2021
-
-### 0103
-
-1. slice() 数组截取问题
