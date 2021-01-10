@@ -1,14 +1,19 @@
 # axios 统一封装
+
 ## 安装
+
 ```
 npm install axios --save; // 安装axios
 ```
 ## 引入
+
 ```javascript
 import axios from 'axios'; // 引入axios
 import qs from 'qs'; // 引入qs模块，用来序列化post类型的数据
 ```
+
 ## 环境切换
+
 根据项目环境所需更改接口url前缀
 ```javascript
 // 环境的切换
@@ -21,7 +26,9 @@ else if (process.env.NODE_ENV == 'production') {
     axios.defaults.baseURL = 'https://www.production.com';
 }
 ```
+
 ## 基础配置
+
 ```javascript
 const service = axios.create({
   baseURL: baseURL, // 动态设置api接口
@@ -32,6 +39,7 @@ const service = axios.create({
 ```
 
 ## 请求拦截器
+
 ```javascript
 service.interceptors.request.use(config => {
     // 每次发送请求之前可根据业务情况做统一操作, 例如将token添加到请求头
@@ -40,7 +48,9 @@ service.interceptors.request.use(config => {
   Promise.reject(error) //
 })
 ```
+
 ## 响应拦截器
+
 ```javascript
 service.interceptors.response.use(
   response => {
@@ -72,6 +82,7 @@ service.interceptors.response.use(
 ```
 
 ## get和post方法统一封装
+
 ```javascript
 const fetch = (method, url, data = {}, config) => {
   config = config || {}
@@ -90,11 +101,21 @@ const post = (url, data, config, isQs) => {
     return fetch('post', url, data, config)
 }
 ```
+
 ## api统一管理
+
 ```javascript
 import { post,get } from '../fetch'
 export const getTabData = () => post('/electricityClassify/classifylist')
 ```
 
+## 四种请求头常见设置
 
-
+1. application/x-www-form-urlencoded 
+    post提交数据方式，需要对参数qs序列化
+2. multipart/form-data 
+    post提交方式，使用表单上传文件，必须让form的enctyped等于这个值，配合ajax提交需要配合formData去使用    
+3. application/json
+    post提交方式，告诉服务器消息主体是序列化（JSON.stringify）的JSON字符串，适合深层数据提交，
+4. text/xml
+    没用过，

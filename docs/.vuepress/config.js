@@ -7,7 +7,7 @@ module.exports = {
   ],
   themeConfig: { // 主题配置
     nav: [
-      { text: "最近阅读", link: "/diary/read" },
+      { text: "最近阅读", link: "/diary/" },
       { text: "网站", link: "/website/" },
       { text: "业务应用", link: "/business/article" },
       { text: "vue", link: "/vue/api" },
