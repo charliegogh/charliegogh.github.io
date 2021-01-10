@@ -8,12 +8,12 @@ module.exports = {
   themeConfig: { // 主题配置
     nav: [
       { text: "最近阅读", link: "/diary/" },
+      { text: "vue", link: "/vue/api" },
+      { text: "js", link: "/js/useful" },
+      { text: "业务应用", link: "/business/article" },
       { text: "网站", link: "/website/" },
       { text: "工具", link: "/tools/git" },
-      { text: "业务应用", link: "/business/article" },
-      { text: "vue", link: "/vue/api" },
-      { text: "库", link: "/repository/" },
-      { text: "js", link: "/js/useful" },
+      { text: "库", link: "/repository/" }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
