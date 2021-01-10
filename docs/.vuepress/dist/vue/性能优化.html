@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>vue项目优化 |  </title>
-    <meta name="generator" content="VuePress 1.7.1">
+    <meta name="generator" content="VuePress 1.8.0">
     <link rel="icon" href="./favicon.ico">
     <meta name="description" content=" ">
     
-    <link rel="preload" href="/assets/css/0.styles.a27476a9.css" as="style"><link rel="preload" href="/assets/js/app.cd6306d0.js" as="script"><link rel="preload" href="/assets/js/2.66130339.js" as="script"><link rel="preload" href="/assets/js/24.37a17901.js" as="script"><link rel="prefetch" href="/assets/js/10.aa1407c3.js"><link rel="prefetch" href="/assets/js/11.42dc6602.js"><link rel="prefetch" href="/assets/js/12.027ae7e1.js"><link rel="prefetch" href="/assets/js/13.97198ecc.js"><link rel="prefetch" href="/assets/js/14.5e7885d2.js"><link rel="prefetch" href="/assets/js/15.e09eaecd.js"><link rel="prefetch" href="/assets/js/16.d9bd4441.js"><link rel="prefetch" href="/assets/js/17.560d4f0d.js"><link rel="prefetch" href="/assets/js/18.d329309c.js"><link rel="prefetch" href="/assets/js/19.09b80d05.js"><link rel="prefetch" href="/assets/js/20.f1b23d70.js"><link rel="prefetch" href="/assets/js/21.7446568f.js"><link rel="prefetch" href="/assets/js/22.86ad90e2.js"><link rel="prefetch" href="/assets/js/23.06559768.js"><link rel="prefetch" href="/assets/js/25.1c27a2af.js"><link rel="prefetch" href="/assets/js/26.7b7c9e75.js"><link rel="prefetch" href="/assets/js/27.99ff253f.js"><link rel="prefetch" href="/assets/js/28.e6ccd93a.js"><link rel="prefetch" href="/assets/js/3.b68bf952.js"><link rel="prefetch" href="/assets/js/4.e199924d.js"><link rel="prefetch" href="/assets/js/5.ef0b89fd.js"><link rel="prefetch" href="/assets/js/6.71652b80.js"><link rel="prefetch" href="/assets/js/7.794e771d.js"><link rel="prefetch" href="/assets/js/8.08531646.js"><link rel="prefetch" href="/assets/js/9.2610b561.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.a27476a9.css">
+    <link rel="preload" href="/assets/css/0.styles.8909517a.css" as="style"><link rel="preload" href="/assets/js/app.e4595c40.js" as="script"><link rel="preload" href="/assets/js/2.e9e7e627.js" as="script"><link rel="preload" href="/assets/js/23.a9aa70d1.js" as="script"><link rel="prefetch" href="/assets/js/10.2b5ce065.js"><link rel="prefetch" href="/assets/js/11.b1029b62.js"><link rel="prefetch" href="/assets/js/12.ead52316.js"><link rel="prefetch" href="/assets/js/13.94977094.js"><link rel="prefetch" href="/assets/js/14.edd79dc4.js"><link rel="prefetch" href="/assets/js/15.4311d5c7.js"><link rel="prefetch" href="/assets/js/16.b848b3ca.js"><link rel="prefetch" href="/assets/js/17.13edb49d.js"><link rel="prefetch" href="/assets/js/18.42ca1be6.js"><link rel="prefetch" href="/assets/js/19.db800969.js"><link rel="prefetch" href="/assets/js/20.489b7ef3.js"><link rel="prefetch" href="/assets/js/21.b666ec55.js"><link rel="prefetch" href="/assets/js/22.b020afc4.js"><link rel="prefetch" href="/assets/js/24.a815ab44.js"><link rel="prefetch" href="/assets/js/25.aad6d817.js"><link rel="prefetch" href="/assets/js/26.3d9843e1.js"><link rel="prefetch" href="/assets/js/27.42cae2b9.js"><link rel="prefetch" href="/assets/js/3.31ad5e10.js"><link rel="prefetch" href="/assets/js/4.e6154b7b.js"><link rel="prefetch" href="/assets/js/5.4a646df1.js"><link rel="prefetch" href="/assets/js/6.7a0f80e6.js"><link rel="prefetch" href="/assets/js/7.418ffdf0.js"><link rel="prefetch" href="/assets/js/8.82e125ca.js"><link rel="prefetch" href="/assets/js/9.93679811.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8909517a.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/diary/read.html" class="nav-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/diary/" class="nav-link">
   最近阅读
 </a></div><div class="nav-item"><a href="/website/" class="nav-link">
   网站
@@ -24,7 +24,7 @@
   库
 </a></div><div class="nav-item"><a href="/js/useful.html" class="nav-link">
   js
-</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/diary/read.html" class="nav-link">
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/diary/" class="nav-link">
   最近阅读
 </a></div><div class="nav-item"><a href="/website/" class="nav-link">
   网站
@@ -157,6 +157,6 @@ computed<span class="token operator">:</span> <span class="token punctuation">{<
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.cd6306d0.js" defer></script><script src="/assets/js/2.66130339.js" defer></script><script src="/assets/js/24.37a17901.js" defer></script>
+    <script src="/assets/js/app.e4595c40.js" defer></script><script src="/assets/js/2.e9e7e627.js" defer></script><script src="/assets/js/23.a9aa70d1.js" defer></script>
   </body>
 </html>

@@ -9,6 +9,7 @@ module.exports = {
     nav: [
       { text: "最近阅读", link: "/diary/" },
       { text: "网站", link: "/website/" },
+      { text: "工具", link: "/tools/git" },
       { text: "业务应用", link: "/business/article" },
       { text: "vue", link: "/vue/api" },
       { text: "库", link: "/repository/" },

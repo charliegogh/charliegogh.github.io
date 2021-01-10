@@ -18,28 +18,5 @@ sidebar: auto
 - [51](http://blog.51cto.com/artcommend/30)
 - [w3cplus](http://www.w3cplus.com/)
 
-## 工具
 
-- windows快速删除npm包
 
-- 安装npm install -g rimraf
-
-- 使用
-```
-cd xxx [the folder which includes node_modules folder]
-rimraf node_modules
-```
-
-- node文档目录生成
-
-1. 安装
-```
-npm install mddir --save
-```
-2. 使用
-```
- cd到主要文件下 
-    node mddir "../../../" 
-    输入当前文件下往上三个文件夹的结构
-```
-   
