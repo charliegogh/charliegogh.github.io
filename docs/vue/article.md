@@ -2,7 +2,6 @@
 
 ## useful
 
-- [vuex表单处理](https://blog.csdn.net/zjerryj/article/details/79984023)  
 - [Vue 使用中的小技巧](https://mp.weixin.qq.com/s/YO73U8OAw9Isg0GguakHZw)    
 - [vue父组件异步获取动态数据传递给子组件 获取不到值的问题](https://www.jianshu.com/p/4450b63a27fe) 
 - [Vue.js最佳实践（五招让你成为Vue.js大师）](https://segmentfault.com/a/1190000014085613?utm_source=tag-newest) 
