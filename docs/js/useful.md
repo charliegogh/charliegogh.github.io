@@ -87,7 +87,7 @@ JSON.parse(JSON.stringify(obj).replace(/\s+/g, ""))
 let max = arr[0]
 arr.forEach(item => max = item > max ? item : max)
 console.log(max) // 100
-```  
+```
 
 (2)将整个数组都排序，获取最大值利用array.sort()方法，指定排序函数，来排序数组。当然，你也可以使用其他排序方式，来排序数组。
 
@@ -95,7 +95,7 @@ console.log(max) // 100
 let AS = arr.sort((a, b) => a - b) 
 AS[arr.length-1]  // 获取最大值：100
 AS[0] // 获取最小值： -1
-```  
+```
 
 ## js将手机中间四位变成*，正则做法
 
@@ -133,4 +133,4 @@ const ary=['1','2','1']
        }
   }
 ```
-   
+
