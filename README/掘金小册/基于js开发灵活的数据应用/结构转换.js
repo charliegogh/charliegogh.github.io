@@ -1,3 +1,9 @@
+// Any ↔ 字符串
+
+// toFixed()
+console.log(-5.33.toFixed()+1)
+
+
 // 对象转数组
 const data = {
     name:'charlie',
