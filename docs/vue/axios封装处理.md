@@ -34,7 +34,23 @@ const service = axios.create({
   baseURL: baseURL, // 动态设置api接口
   withCredentials: true,  // 允许携带token
   timeout: 200000, // 请求超时时间
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }  // 设置post请求头
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },  // 设置post请求头
+  // 不同请求头配置不同data
+  transformRequest: [
+    function(data, config) {
+      const ContentType = config['Content-Type']
+      if (ContentType === 'application/x-www-form-urlencoded') {
+        // 序列化
+        return qs.stringify(data)
+      } else if (ContentType === 'multipart/form-data') {
+        return data
+      } else {
+        // json格式
+        config['Content-Type'] = 'application/json;charset=UTF-8'
+        return JSON.stringify(data)
+      }
+    }
+  ]
 })
 ```
 
@@ -42,7 +58,17 @@ const service = axios.create({
 
 ```javascript
 service.interceptors.request.use(config => {
-    // 每次发送请求之前可根据业务情况做统一操作, 例如将token添加到请求头
+ // 在请求之前判断token是否存在 否=>请求阻止
+  if (!getToken()) {
+    if (typeof config.requireToken === 'undefined' || config.requireToken === true) {
+      config.cancelToken = source.token // 阻止请求
+    }
+  }
+ // 配置token信息，这里以vuex为基础
+ const token = store.getters.token
+  if (token && config.needToken === undefined) {
+    config.headers['Authorization'] = 'JWT ' + token
+  }
   return config
 }, error => {
   Promise.reject(error) //
@@ -65,17 +91,19 @@ service.interceptors.response.use(
     const code = errMsg.substr(errMsg.indexOf('code') + 5)
     // 根据code码反馈用户相应信息
     if (code === '500' || code === '502') {
-      Toast('服务器错误')
+      alert('服务器错误')
     }
     if (code === '404') {
-      Toast('服务器错误')
+      alert('服务器错误')
     }
     if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
-      Toast('您的网络不稳定 请刷新重试')
+      alert('您的网络不稳定 请刷新重试')
     }
     if (!window.navigator.onLine) {
-      Toast('网络中断')
+      alert('网络中断')
     }
+    // 获取错误响应结果 error.response
+    
     return Promise.reject(error)
   }
 )

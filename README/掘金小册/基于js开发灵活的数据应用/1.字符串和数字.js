@@ -45,4 +45,9 @@ console.log(S)
 console.log(5 % 2);
 console.log(4 % 2);
 
+const result = L.reduce(function (accumulator,currentValue){
+    return accumulator+currentValue
+},0)
+console.log(result)
+
 

@@ -20,12 +20,52 @@ function findData(data, id) {
       if (value) {
         return value
       }
-    } else {
-      // 没找到直接return
-      return null
-    }
+    } 
   }
 }
+```
+> 20210316
+## 多数求和 
+```javascript
+// 使用for循环
+let S = 0
+const L = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+const n = L.length
+
+for (let i = 0; i < n; ++i) {
+    S += L[i]
+}
+console.log(S)
+// reduce 实现
+const result = L.reduce(function (accumulator,currentValue){
+    return accumulator+currentValue
+},0)
+console.log(result)
+```
+
+## 替换字符串 
+
+
+## 排序
+arr.sort() 需要传递一个回调函数，用于对比两个元素
+```javascript
+const arr3 = [
+    {
+        name: '1',
+        data: 0
+    },
+    {
+        name: '1',
+        data: 2
+    },
+    {
+        name: '1',
+        data: 14
+    }
+]
+arr3.sort(function (leftTuple,rightTulple){
+    return rightTulple['data']-leftTuple['data']
+})
 ```
 
 ## 深拷贝实现
