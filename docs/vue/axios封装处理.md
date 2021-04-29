@@ -9,7 +9,7 @@ npm install axios --save; // 安装axios
 
 ```javascript
 import axios from 'axios'; // 引入axios
-import qs from 'qs'; // 引入qs模块，用来序列化post类型的数据
+import qs from 'qs'; // 引入qs模块，用来序列化请求头为'application/x-www-form-urlencoded'数据
 ```
 
 ## 环境切换
@@ -42,12 +42,12 @@ const service = axios.create({
       if (ContentType === 'application/x-www-form-urlencoded') {
         // 序列化
         return qs.stringify(data)
-      } else if (ContentType === 'multipart/form-data') {
-        return data
       } else {
         // json格式
         config['Content-Type'] = 'application/json;charset=UTF-8'
         return JSON.stringify(data)
+      } else {
+        return data
       }
     }
   ]
@@ -82,7 +82,7 @@ service.interceptors.response.use(
   response => {
     // 每次发送请求之后根据业务情况做统一操作
     if (response.data.code === '101') {
-      // router.go(0)   
+            
     }
     return Promise.resolve(response)
   },
@@ -125,7 +125,7 @@ const get = (url, data, config) => {
   return fetch('get', url, data, config)
 }
 
-const post = (url, data, config, isQs) => {
+const post = (url, data, config) => {
     return fetch('post', url, data, config)
 }
 ```

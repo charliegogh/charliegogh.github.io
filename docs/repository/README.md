@@ -16,6 +16,8 @@
 ## vue
 
 - [antV G6流程图在Vue中的使用](https://juejin.cn/post/6844903934620860424)
+> 20210415
+- [vue-ls vue 本地储存示例](https://blog.csdn.net/zhangdaiscott/article/details/103282263)
 
 ## 时间处理
 

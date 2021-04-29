@@ -15,7 +15,7 @@ heroText: null
 - perf：性能优化
 - test：增加测试
 - build：改变了build工具 如 grunt换成了 npm
-- revert：撤销上一次的commit ​​​​
+- revert：撤销上一次的commit
 
 ## 目录文件命名
 

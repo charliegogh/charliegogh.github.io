@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>axios 统一封装 |  </title>
-    <meta name="generator" content="VuePress 1.7.1">
+    <meta name="generator" content="VuePress 1.8.2">
     <link rel="icon" href="./favicon.ico">
+    <script>
+       var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4c899f131fd50b606fea334985b2335b";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+        </script>
     <meta name="description" content=" ">
     
-    <link rel="preload" href="/assets/css/0.styles.d32c054f.css" as="style"><link rel="preload" href="/assets/js/app.da3379a7.js" as="script"><link rel="preload" href="/assets/js/2.66130339.js" as="script"><link rel="preload" href="/assets/js/25.8bfe4251.js" as="script"><link rel="prefetch" href="/assets/js/10.6ef4a88b.js"><link rel="prefetch" href="/assets/js/11.ab9a5e2d.js"><link rel="prefetch" href="/assets/js/12.6a7b9ce3.js"><link rel="prefetch" href="/assets/js/13.6050f60c.js"><link rel="prefetch" href="/assets/js/14.8d40db50.js"><link rel="prefetch" href="/assets/js/15.7734e774.js"><link rel="prefetch" href="/assets/js/16.c4453aaa.js"><link rel="prefetch" href="/assets/js/17.d85c17a7.js"><link rel="prefetch" href="/assets/js/18.f4180329.js"><link rel="prefetch" href="/assets/js/19.05a3b2fa.js"><link rel="prefetch" href="/assets/js/20.1a03cc45.js"><link rel="prefetch" href="/assets/js/21.be80a24f.js"><link rel="prefetch" href="/assets/js/22.278c2163.js"><link rel="prefetch" href="/assets/js/23.9b47c459.js"><link rel="prefetch" href="/assets/js/24.feda054d.js"><link rel="prefetch" href="/assets/js/26.113699d6.js"><link rel="prefetch" href="/assets/js/27.d7fdfd73.js"><link rel="prefetch" href="/assets/js/28.394099df.js"><link rel="prefetch" href="/assets/js/29.7425c9e1.js"><link rel="prefetch" href="/assets/js/3.f51d8623.js"><link rel="prefetch" href="/assets/js/30.aa27e6cd.js"><link rel="prefetch" href="/assets/js/31.e266a08c.js"><link rel="prefetch" href="/assets/js/32.94ce2d7a.js"><link rel="prefetch" href="/assets/js/33.b76b7a84.js"><link rel="prefetch" href="/assets/js/4.dea7d01f.js"><link rel="prefetch" href="/assets/js/5.e37e5237.js"><link rel="prefetch" href="/assets/js/6.71652b80.js"><link rel="prefetch" href="/assets/js/7.794e771d.js"><link rel="prefetch" href="/assets/js/8.d3975474.js"><link rel="prefetch" href="/assets/js/9.f6c96652.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.d32c054f.css">
+    <link rel="preload" href="/assets/css/0.styles.304d2e8d.css" as="style"><link rel="preload" href="/assets/js/app.52d92c52.js" as="script"><link rel="preload" href="/assets/js/2.06dd539c.js" as="script"><link rel="preload" href="/assets/js/27.31a91052.js" as="script"><link rel="prefetch" href="/assets/js/10.860e3148.js"><link rel="prefetch" href="/assets/js/11.cebb8526.js"><link rel="prefetch" href="/assets/js/12.6c6d247e.js"><link rel="prefetch" href="/assets/js/13.b399c440.js"><link rel="prefetch" href="/assets/js/14.e5fe4596.js"><link rel="prefetch" href="/assets/js/15.2a43b77e.js"><link rel="prefetch" href="/assets/js/16.83fcd8e2.js"><link rel="prefetch" href="/assets/js/17.84a58e41.js"><link rel="prefetch" href="/assets/js/18.b0cf339a.js"><link rel="prefetch" href="/assets/js/19.5f120045.js"><link rel="prefetch" href="/assets/js/20.22046445.js"><link rel="prefetch" href="/assets/js/21.9d46947f.js"><link rel="prefetch" href="/assets/js/22.12b4df6d.js"><link rel="prefetch" href="/assets/js/23.0ecc0026.js"><link rel="prefetch" href="/assets/js/24.7a744904.js"><link rel="prefetch" href="/assets/js/25.57229fb1.js"><link rel="prefetch" href="/assets/js/26.c671a732.js"><link rel="prefetch" href="/assets/js/28.4c000a0f.js"><link rel="prefetch" href="/assets/js/29.0066585b.js"><link rel="prefetch" href="/assets/js/3.4042fb27.js"><link rel="prefetch" href="/assets/js/30.b0f99a56.js"><link rel="prefetch" href="/assets/js/31.ff204893.js"><link rel="prefetch" href="/assets/js/32.3cfceb5a.js"><link rel="prefetch" href="/assets/js/33.035d0632.js"><link rel="prefetch" href="/assets/js/34.a7eca38c.js"><link rel="prefetch" href="/assets/js/35.6eefa87e.js"><link rel="prefetch" href="/assets/js/4.45455488.js"><link rel="prefetch" href="/assets/js/5.1aa68d90.js"><link rel="prefetch" href="/assets/js/6.a3f0e1fc.js"><link rel="prefetch" href="/assets/js/7.faaa686b.js"><link rel="prefetch" href="/assets/js/8.90ec9211.js"><link rel="prefetch" href="/assets/js/9.ae2e4731.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.304d2e8d.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/diary/" class="nav-link">
@@ -56,10 +65,36 @@
   baseURL<span class="token operator">:</span> baseURL<span class="token punctuation">,</span> <span class="token comment">// 动态设置api接口</span>
   withCredentials<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">// 允许携带token</span>
   timeout<span class="token operator">:</span> <span class="token number">200000</span><span class="token punctuation">,</span> <span class="token comment">// 请求超时时间</span>
-  headers<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/x-www-form-urlencoded'</span> <span class="token punctuation">}</span>  <span class="token comment">// 设置post请求头</span>
+  headers<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/x-www-form-urlencoded'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment">// 设置post请求头</span>
+  <span class="token comment">// 不同请求头配置不同data</span>
+  transformRequest<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> ContentType <span class="token operator">=</span> config<span class="token punctuation">[</span><span class="token string">'Content-Type'</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ContentType <span class="token operator">===</span> <span class="token string">'application/x-www-form-urlencoded'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 序列化</span>
+        <span class="token keyword">return</span> qs<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ContentType <span class="token operator">===</span> <span class="token string">'multipart/form-data'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// json格式</span>
+        config<span class="token punctuation">[</span><span class="token string">'Content-Type'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'application/json;charset=UTF-8'</span>
+        <span class="token keyword">return</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><h2 id="请求拦截器"><a href="#请求拦截器" class="header-anchor">#</a> 请求拦截器</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 每次发送请求之前可根据业务情况做统一操作, 例如将token添加到请求头</span>
+ <span class="token comment">// 在请求之前判断token是否存在 否=&gt;请求阻止</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">getToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> config<span class="token punctuation">.</span>requireToken <span class="token operator">===</span> <span class="token string">'undefined'</span> <span class="token operator">||</span> config<span class="token punctuation">.</span>requireToken <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>cancelToken <span class="token operator">=</span> source<span class="token punctuation">.</span>token <span class="token comment">// 阻止请求</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token comment">// 配置token信息，这里以vuex为基础</span>
+ <span class="token keyword">const</span> token <span class="token operator">=</span> store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>token
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>token <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>needToken <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'Authorization'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'JWT '</span> <span class="token operator">+</span> token
+  <span class="token punctuation">}</span>
   <span class="token keyword">return</span> config
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token comment">//</span>
@@ -77,17 +112,19 @@
     <span class="token keyword">const</span> code <span class="token operator">=</span> errMsg<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>errMsg<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'code'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span>
     <span class="token comment">// 根据code码反馈用户相应信息</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token string">'500'</span> <span class="token operator">||</span> code <span class="token operator">===</span> <span class="token string">'502'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">Toast</span><span class="token punctuation">(</span><span class="token string">'服务器错误'</span><span class="token punctuation">)</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'服务器错误'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token string">'404'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">Toast</span><span class="token punctuation">(</span><span class="token string">'服务器错误'</span><span class="token punctuation">)</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'服务器错误'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token string">'ECONNABORTED'</span> <span class="token operator">&amp;&amp;</span> error<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'timeout'</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">Toast</span><span class="token punctuation">(</span><span class="token string">'您的网络不稳定 请刷新重试'</span><span class="token punctuation">)</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'您的网络不稳定 请刷新重试'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>onLine<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">Toast</span><span class="token punctuation">(</span><span class="token string">'网络中断'</span><span class="token punctuation">)</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'网络中断'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
+    <span class="token comment">// 获取错误响应结果 error.response</span>
+    
     <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">)</span>
@@ -113,7 +150,7 @@
 post提交数据方式，需要对参数qs序列化</li> <li>multipart/form-data
 post提交方式，使用表单上传文件，必须让form的enctyped等于这个值，配合ajax提交需要配合formData去使用</li> <li>application/json
 post提交方式，告诉服务器消息主体是序列化（JSON.stringify）的JSON字符串，适合深层数据提交，</li> <li>text/xml
-没用过，</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">1/10/2021, 11:52:53 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+没用过，</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/18/2021, 5:23:03 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/vue/article.html" class="prev">
         article
@@ -122,6 +159,6 @@ post提交方式，告诉服务器消息主体是序列化（JSON.stringify）�
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.da3379a7.js" defer></script><script src="/assets/js/2.66130339.js" defer></script><script src="/assets/js/25.8bfe4251.js" defer></script>
+    <script src="/assets/js/app.52d92c52.js" defer></script><script src="/assets/js/2.06dd539c.js" defer></script><script src="/assets/js/27.31a91052.js" defer></script>
   </body>
 </html>

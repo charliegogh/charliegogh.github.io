@@ -3,7 +3,16 @@ module.exports = {
   title: " ",  // 网站标题
   description: ' ',     // 网站描述
   head: [
-    ['link', { rel: 'icon', href: './favicon.ico' }]
+    ['link', { rel: 'icon', href: './favicon.ico' }],
+    ['script', {}, `
+       var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4c899f131fd50b606fea334985b2335b";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+        `]
   ],
   themeConfig: { // 主题配置
     nav: [

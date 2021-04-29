@@ -1,17 +1,10 @@
-//
-// let arr = [{name: "soina", value: '122'},
-//     {name: "amy", value: '123'},
-//     {name: "foina", value: '124'}]
-// let obj = {}
-// arr.map((e, item) => {
-//     obj[e.name] = e
-// })
-// console.log(obj);
+const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length
 
-// 数组求和
+var arr = [{id: 1, pid: null}, {id: 11, pid: 1}, {id: 12, pid: 1}]
 
-const sum = (...arr) => [...arr].reduce((acc, val) => acc + val, 0)
+const nest = (items, id = null, link = 'pid') =>
+    items
+        .filter(item => item[link] === id)
+        .map(item => ({...item, children: nest(items, item.id)}))
 
-console.log(sum(...[1,24,5,6]))
-
-//
+console.log(nest(arr, null));
