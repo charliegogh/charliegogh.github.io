@@ -80,26 +80,15 @@ export function rebuildData(data, value, arr) {
 ## 扁平化数据转树
 
 ```javascript
-var arr = [{id: 1, pid: '-1'},{id: 11, pid: '1'},{id: 12, pid: '1'}]
-function listToTree(list) {
-    var map = {}, node, tree= [], i;
-    for (i = 0; i < list.length; i ++) {
-        map[list[i].id] = list[i]; 
-        list[i].children = []; 
-    }
-    for (i = 0; i < list.length; i += 1) {
-        node = list[i];
-        if (node.pid !== '-1') {
-            map[node.pid].children.push(node);
-        } else {
-            tree.push(node);
-        }
-    }
-    return tree;
-}
+var arr = [{id: 1, pid: null}, {id: 11, pid: 1}, {id: 12, pid: 1}]
+const nest = (items, id = null, link = 'pid') =>
+    items
+        .filter(item => item[link] === id)
+        .map(item => ({...item, children: nest(items, item.id)}))
 ```
 
 ## 设置树等级及父id
+
 ```javascript
  function formatNavData(data, level = 1, nodeId = '') {
       if (!(data instanceof Array)) {

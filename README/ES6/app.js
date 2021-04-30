@@ -13,3 +13,13 @@ const arr = ['50g']
 console.log();
 const obj=Object.entries(arr).map(item=>({name:item}))
 console.log(obj);
+
+
+const arrayLike = {
+    '0': 'a',
+    '1': 'b',
+    '2': 'c',
+    length: 3
+}
+const arr2 = Array.from(arrayLike)
+console.log(arr2);

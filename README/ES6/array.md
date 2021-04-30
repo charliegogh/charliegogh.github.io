@@ -12,22 +12,6 @@ Array.isArray(a) ==> true
 Array.isArray(obj); // its a new Array method
 ```
 
-## 计算数组元素相加之后的总和 reduce()
-```javascript
-/**
- * @param total 初始值或者为返回的值
- * @param num 当前元素
- * @param currentIndex 当前元素的索引值
- * @param arr
- * @returns {*}
- */
-function getNum(total,num,currentIndex,arr) {
-    return total+num
-}
-arr.reduce(getNum)
-
-```
-
 ## indexOf() 
 > 返回找到第一个元素的索引 如果没有找到返回-1
 
@@ -84,8 +68,7 @@ console.log(obj3);
 2. 数组转对象
 > Object.entries es7
 ```javascript
-    const arr = ['50g']
-console.log();
+const arr = ['50g']
 const obj=Object.entries(arr).map(item=>({name:item}))
 console.log(obj);
 ```
@@ -105,5 +88,8 @@ const arr3=[...arr,...arr2]
 ```
 
 ## Array.of()
-> Array.of方法用于将一组值，转换为数组。
+> Array.of方法用于将一组值，转换为数组，总是返回参数值组成的数组
 
+### Array.from()
+
+> 将两类（类数组、可遍历）对象转换成数组
