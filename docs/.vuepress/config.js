@@ -1,7 +1,7 @@
 const utils = require("./utils");
 module.exports = {
-  title: " ",  // 网站标题
-  description: ' ',     // 网站描述
+  title: "charlie",  // 网站标题
+  description: 'charlie',     // 网站描述
   head: [
     ['link', { rel: 'icon', href: './favicon.ico' }],
     ['script', {}, `
@@ -22,7 +22,8 @@ module.exports = {
       { text: "业务应用", link: "/business/article" },
       { text: "网站", link: "/website/" },
       { text: "工具", link: "/tools/git" },
-      { text: "库", link: "/repository/" }
+      { text: "库", link: "/repository/" },
+      { text: "开发规范", link: "/standard/" }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',

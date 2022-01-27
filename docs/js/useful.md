@@ -2,6 +2,23 @@
 
 ## 数组
 
+### 数据降维 0806
+
+#### 二维降一维
+
+1. reduce
+```javascript
+const arr = [[1,2],3]
+arr.reduce((prev,cur)=>(prev.concat(cur)),[])
+```
+
+2. flat
+```javascript
+const arr = [[1,2],3]
+arr.flat()
+```
+- 二维数组默认拉平，设置拉平所有层 arr.flat(Infinity)
+
 ### 去除数组中的无用值
 
 ```javascript
@@ -221,6 +238,20 @@ deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]
 JSON.parse(JSON.stringify(obj).replace(/\s+/g, ""))
 ```
 
+### 对象属性赋值
+
+```javascript
+const name = "Luis", city = "Paris", age = 43, favoriteFood = "Spaghetti";
+// LONGER FORM
+const person = {
+  name: name,
+  city: city,
+  age: age,
+  favoriteFood: favoriteFood
+};
+// SHORTHAND
+const person = { name, city, age, favoriteFood };
+```
 
 
 ## 字符串
@@ -340,3 +371,37 @@ if (!tmp && typeof(tmp)!="undefined" && tmp!=0){
    console.log(null)
 }
 ```
+
+
+### 较短的 If-Else 的空合并
+
+```javascript
+let maybeSomething;
+
+
+// LONG FORM
+if(maybeSomething){
+  console.log(maybeSomething)
+} else {
+  console.log("Nothing found")
+}
+
+
+//SHORTHAND
+console.log(maybeSomething ?? "Nothing found")
+```
+
+### !!将任何值转换为布尔值 
+
+```javascript
+!!true    // true
+!!2       // true
+!![]      // true
+!!"Test"  // true
+
+
+!!false   // false
+!!0       // false
+!!""      // false
+```
+

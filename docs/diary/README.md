@@ -1,8 +1,44 @@
-
-
 # 2021
 
+## 11月
+
+### 1104
+[33个非常实用的JavaScript一行代码，建议收藏！](https://juejin.cn/post/7025771605422768159)
+
+### 1103
+[cssTab切换效果](https://juejin.cn/post/6844903583419203592)
+
+## 10月
+
+### 1021
+- [写在 2021 的前端性能优化指南] (https://mp.weixin.qq.com/s/xccL9lTY6GKY2YqX7_FDQw)
+### 1018
+- [2021 年当我们聊前端部署时，我们在聊什么](https://juejin.cn/post/7017710911443959839)   慢慢去看
+- [56个JavaScript 实用工具函数助你提升开发效率！](https://juejin.cn/post/7019090370814279693)
+
+### 1013
+- [有个开发者总结这 15 优雅的 JavaScript 个技巧](https://juejin.cn/post/7017968328694038536) 
+- [前端监控 SDK 的一些技术要点原理分析](https://juejin.cn/post/7017974567943536671)
+- [es6使用](https://juejin.cn/post/7016520448204603423)
+
+
+
+## 9月
+
+### 0901
+1. jsonp本地js跨域访问适用于本地读取文件
+
+### 0826
+
+- [基于 Vue、Echarts 构建的数据可视化平台，酷炫大屏展示模板和组件库](https://github.com/jackchen0120/vueDataV)
+
+### 0825
+
+- [8个工程必备的JavaScript代码片段（建议添加到项目中）](https://juejin.cn/post/6999391770672889893)
+- [基础很好？总结了38个ES6-ES12的开发技巧，倒要看看你能拿几分](https://juejin.cn/post/6995334897065787422)
+
 ## 0301
+
 -[前端优秀实践不完全指南](https://juejin.cn/post/6932647134944886797)
 
 
@@ -28,4 +64,5 @@
 - [17 个你不知道的专业 JavaScript 技巧](https://dev.to/rahxuls/17-pro-javascript-tricks-you-didn-t-know-5gog)
 - [js工具类](https://juejin.cn/post/6844903591325466637?utm_source=gold_browser_extension%3Futm_source%3Dgold_browser_extension#heading-18)
 - [12个拷贝数组的技巧](https://juejin.cn/post/6903852199311310862)
+
 
