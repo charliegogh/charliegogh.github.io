@@ -1,0 +1,108 @@
+- 框架
+    - vue
+        - MVVM
+            - 什么是MVVM，和MVC有啥区别
+        - 生命周期
+            - $nexttick原理和作用
+            - vue中的异步函数最好放在哪个生命周期，具体原因是什么
+        - 组件通信
+            - Event Bus原理
+            - 父子组件通信
+            - 兄弟组件通信
+        - 数据绑定
+            - vue2中数据更新界面不刷新的情况
+            - v-for  中为什么要使用key
+        - Diff
+        - 状态管理
+            - vuex原理
+            - 实现简单的状态管理
+        - computed和watch区别
+        - mixin
+    - vue和react的区别
+- js基础
+    - 数据类型
+        - 分类
+        - 类型判断
+            - 检验数据类型的方法
+            - null和undefined区别
+        - 类型转换
+        - 类型检验
+    - 作用域/作用域链、执行上下文
+        - 讲讲变量提升
+    - 闭包
+        - 什么是闭包
+        - 闭包问题如何解决
+        - 闭包场景
+            - 最常见：取值问题
+    - this
+        - 如何判断this指向
+        - 如何改变this指向
+        - call、apply、bind原理、实现
+    - 原型/原型链
+        - 原型链是什么
+    - 防抖/节流
+        - 原理
+        - 实现
+    - new 实现
+    - event loop
+        - 同步异步有啥区别
+        - 解决异步的方式
+        - 宏任务和微任务有什么区别
+        - Promise async/await 区别
+    - 深拷贝/浅拷贝
+        - 原理
+        - 实现
+    - es6
+        - var、let及const区别
+        - 数组
+            - 构造函数新增
+                - 数组去重
+            - 实例对象新增
+        - 对象
+            - 新增方法
+        - 函数
+            - 箭头函数为什么不需要考虑this问题
+        - proxy
+        - class
+            - super关键字作用是什么
+    - 循环
+        - for forEach map 区别
+- css
+    - 回流和重绘
+    - flex
+        - flex1指的是什么
+    - BFC
+- 设计模式
+    - 单例模式
+    - 发布订阅模式
+- 性能优化
+    - 图片优化
+    - webpack
+        - 拆包
+            - splitChunks
+            - externals
+            - ContextReplacementPlugin
+                - 保留moment国内包
+        - gzip压缩
+        - 代码压缩
+        - 图片base64
+    - 网络优化
+        - 缓存
+        - preload/prefetch
+- 网络
+    - http
+        - 常见的HTTP状态码
+        - 常见的请求方式有哪些?
+        - GET和POST的区别，何时使用POST
+    - tcp
+        - 四次握手
+    - https
+        - 为什么HTTPS比HTTP安全
+    - cdn
+    - 从输入url到页面展示，发生了什么
+- 工程化
+    - webpack
+        - 热更新
+        - 搭建多页面应用，适用于多页面环境
+    - rollup
+    - qiankun

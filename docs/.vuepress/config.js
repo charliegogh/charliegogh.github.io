@@ -21,9 +21,10 @@ module.exports = {
       { text: "js", link: "/js/useful" },
       { text: "业务应用", link: "/business/article" },
       { text: "网站", link: "/website/" },
-      { text: "工具", link: "/tools/git" },
-      { text: "库", link: "/repository/" },
-      { text: "开发规范", link: "/standard/" }
+      // { text: "工具", link: "/tools/git" },
+      // { text: "库", link: "/repository/" },
+      { text: "开发规范", link: "/standard/" },
+      { text: "面试大纲", link: "/interview/" }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
