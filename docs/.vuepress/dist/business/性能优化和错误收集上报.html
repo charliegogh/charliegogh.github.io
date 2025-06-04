@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>性能优化和错误收集上报 | 知网研学</title>
+    <meta name="description" content=" ">
+    <script>
+       var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4c899f131fd50b606fea334985b2335b";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+        </script>
+    
+    <link rel="preload" href="/web/tools/assets/css/0.styles.8a993a94.css" as="style"><link rel="preload" href="/web/tools/assets/js/app.988a242c.js" as="script"><link rel="preload" href="/web/tools/assets/js/2.a48c46d0.js" as="script"><link rel="preload" href="/web/tools/assets/js/9.d4913985.js" as="script"><link rel="prefetch" href="/web/tools/assets/js/10.ede06cf5.js"><link rel="prefetch" href="/web/tools/assets/js/11.c5cffbd6.js"><link rel="prefetch" href="/web/tools/assets/js/12.a486faea.js"><link rel="prefetch" href="/web/tools/assets/js/13.5215a184.js"><link rel="prefetch" href="/web/tools/assets/js/14.1db86d3b.js"><link rel="prefetch" href="/web/tools/assets/js/15.5e2d6054.js"><link rel="prefetch" href="/web/tools/assets/js/16.58c2a87b.js"><link rel="prefetch" href="/web/tools/assets/js/17.c9a51060.js"><link rel="prefetch" href="/web/tools/assets/js/3.74840455.js"><link rel="prefetch" href="/web/tools/assets/js/4.78f02381.js"><link rel="prefetch" href="/web/tools/assets/js/5.5a7d1851.js"><link rel="prefetch" href="/web/tools/assets/js/6.88d1bc5b.js"><link rel="prefetch" href="/web/tools/assets/js/7.a814d3c4.js"><link rel="prefetch" href="/web/tools/assets/js/8.597c4bcd.js">
+    <link rel="stylesheet" href="/web/tools/assets/css/0.styles.8a993a94.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/web/tools/" class="home-link router-link-active"><!----> <span class="site-name">知网研学</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/web/tools/components/" class="nav-link">组件应用</a></div><div class="nav-item"><a href="/web/tools/tools/x-sdk.html" class="nav-link">工具</a></div><div class="nav-item"><a href="/web/tools/business/" class="nav-link router-link-active">业务应用</a></div><div class="nav-item"><a href="/web/tools/docker/" class="nav-link">docker</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/web/tools/components/" class="nav-link">组件应用</a></div><div class="nav-item"><a href="/web/tools/tools/x-sdk.html" class="nav-link">工具</a></div><div class="nav-item"><a href="/web/tools/business/" class="nav-link router-link-active">业务应用</a></div><div class="nav-item"><a href="/web/tools/docker/" class="nav-link">docker</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>业务应用</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/tools/business/" class="sidebar-link">研学应用方案</a></li><li><a href="/web/tools/business/x-cli.html" class="sidebar-link">国产化模版规范</a></li><li><a href="/web/tools/business/性能优化和错误收集上报.html" class="active sidebar-link">性能优化和错误收集上报</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#gzip-常见的性能优化配置" class="sidebar-link">gzip 常见的性能优化配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#结合配置建议：" class="sidebar-link">结合配置建议：</a></li></ul></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#错误信息收集" class="sidebar-link">错误信息收集</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#window-onerror-错误收集" class="sidebar-link">window.onerror 错误收集</a></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#跨域脚本错误收集" class="sidebar-link">跨域脚本错误收集</a></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#针对promise的错误收集处理" class="sidebar-link">针对Promise的错误收集处理</a></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#处理网络加载错误" class="sidebar-link">处理网络加载错误</a></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#页面崩溃错误收集" class="sidebar-link">页面崩溃错误收集</a></li></ul></li><li class="sidebar-sub-header"><a href="/web/tools/business/性能优化和错误收集上报.html#性能数据和错误信息上报" class="sidebar-link">性能数据和错误信息上报</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="性能优化和错误收集上报"><a href="#性能优化和错误收集上报" class="header-anchor">#</a> 性能优化和错误收集上报</h1> <p>最近迁移静态资源到CDN后，我们频繁收到页面崩溃的反馈，经过排查发现服务器返回给前端的资源在传输过程中被截断，直接导致了程序的崩溃。碍于桌面端控制台访问的限制，初期我们无法及时捕获这些错误。为此，我们采取了错误收集的措施，并协调实施资源在传输过程中的并行压缩（gzip），效果十分显著，这项改进不仅显著提升了系统性能，还在错误收集方面展现出了明显的实际效果。</p> <p>当谈到前端领域时，性能始终是一个至关重要的议题，因为它直接决定了产品体验的优劣。尽管我们无法保证程序永远不会出现问题，但监控性能数据、收集错误信息并将其上报到线上真实环境是至关重要的。这一系列操作可以让我们随时掌握线上产品的状态，从而优化应用程序的体验，这对于确保用户满意度和产品稳定性至关重要。</p> <h2 id="gzip-常见的性能优化配置"><a href="#gzip-常见的性能优化配置" class="header-anchor">#</a> gzip 常见的性能优化配置</h2> <p>gzip压缩在性能优化中是一项重要的策略，结合前端预压缩和服务端在线压缩可以充分发挥优势。配置nginx时，可以考虑以下方案：</p> <ol><li><p>前端预压缩：使用构建工具（如Webpack、Gulp等）在前端生成.gz文件。</p> <ul><li>优点：
+<ul><li>前期耗时，但减少了服务器压力。</li> <li>加载时不需要服务器实时压缩，提高了前端资源加载速度。</li></ul></li> <li>缺点：
+<ul><li>打包后体积变大，占用更多存储空间。</li> <li>前期构建时间会增加。</li></ul></li></ul></li> <li><p>服务端在线压缩（nginx配置）：在nginx配置中启用gzip模块进行在线压缩。</p> <ul><li>优点：
+<ul><li>不需要预先生成.gz文件，即时压缩，无需占用额外存储空间。</li></ul></li> <li>缺点：
+<ul><li>实时压缩会消耗服务器性能。</li> <li>压缩过程可能导致轻微延迟，影响部分性能。</li></ul></li></ul></li></ol> <h3 id="结合配置建议："><a href="#结合配置建议：" class="header-anchor">#</a> 结合配置建议：</h3> <ul><li>配置nginx：在nginx上进行配置，结合两种方式的优势。</li> <li>条件判断：使用nginx配置判断请求是否存在对应的.gz文件，如果存在，直接返回该静态资源；如果不存在，才进行在线压缩。</li> <li>动静分离：将动态资源和静态资源分开，对于静态资源，尽量利用已经预先压缩好的.gz文件；对于动态资源，根据需要实时压缩。</li></ul> <p>示例nginx配置：</p> <div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">http</span> <span class="token punctuation">{</span>
+    <span class="token keyword">gzip</span> on<span class="token punctuation">;</span>
+    <span class="token keyword">gzip_comp_level</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">gzip_types</span> text<span class="token operator">/</span>plain text<span class="token operator">/</span>css application<span class="token operator">/</span>json application<span class="token operator">/</span>javascript text<span class="token operator">/</span>xml application<span class="token operator">/</span>xml application<span class="token operator">/</span>xml<span class="token operator">+</span>rss text<span class="token operator">/</span>javascript<span class="token punctuation">;</span>
+
+    <span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span>       <span class="token number">80</span><span class="token punctuation">;</span>
+        <span class="token keyword">server_name</span>  example<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
+
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+            <span class="token keyword">root</span>   <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token punctuation">;</span>
+            <span class="token keyword">index</span>  <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+            
+            <span class="token comment"># 检查是否存在对应.gz文件，如果存在直接返回</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">-</span>f <span class="token variable">$request_filename</span><span class="token punctuation">.</span>gz<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">add_header</span> Content<span class="token operator">-</span>Encoding <span class="token keyword">gzip</span><span class="token punctuation">;</span>
+                <span class="token keyword">rewrite</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">)</span> $<span class="token number">1.</span>gz <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment"># 不存在.gz文件，进行在线压缩</span>
+            <span class="token keyword">try_files</span> <span class="token variable">$uri</span> @missing<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">location</span> @missing <span class="token punctuation">{</span>
+            <span class="token keyword">gzip_static</span> off<span class="token punctuation">;</span>
+            <span class="token keyword">gzip</span> on<span class="token punctuation">;</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token comment"># 其他压缩相关配置</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这种结合方式可以充分利用已有的.gz文件，同时对于不存在预压缩文件的请求，实时进行在线压缩，达到压缩资源和减少服务器压力的双重优势。</p> <h2 id="错误信息收集"><a href="#错误信息收集" class="header-anchor">#</a> 错误信息收集</h2> <h3 id="window-onerror-错误收集"><a href="#window-onerror-错误收集" class="header-anchor">#</a> window.onerror 错误收集</h3> <p>window.onerror 是一个全局的事件处理函数，用于捕获未被捕获的 JavaScript 错误。当 JavaScript 运行时发生未捕获的异常时，事件处理函数会被调用，允许开发者在发生错误时执行自定义的操作，比如记录错误信息或通知用户。</p> <p>这个事件处理函数能捕获到以下类型的错误：</p> <ul><li>语法错误（Syntax Errors）： 如代码书写错误、拼写错误等导致的错误。</li> <li>运行时错误（Runtime Errors）：在代码执行过程中发生的错误，比如变量未定义、类型错误等。</li> <li>资源加载错误（Resource Errors）： 比如 script 或 img 加载失败。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>window.onerror = function(message, source, lineno, colno, error) {
+  // message: 错误信息
+  // source: 出错的文件 URL
+  // lineno: 出错代码所在的行号
+  // colno: 出错代码所在的列号
+  // error: 错误对象
+
+  // 执行自定义的错误处理逻辑，比如记录错误日志或发送错误信息到后台
+  console.error('发生错误:', message, '在', source, '的第', lineno, '行，第', colno, '列');
+};
+</code></pre></div><p>但是它有一些局限性：</p> <ol><li>跨域问题：它无法捕获跨域脚本的错误。</li> <li>并不是所有的错误都能被捕获： 比如浏览器崩溃或内存溢出等一些严重的错误可能无法被捕获。</li> <li>错误信息有限： 对于一些错误，它提供的信息可能不够详细，无法提供足够的上下文来排查问题。</li></ol> <h3 id="跨域脚本错误收集"><a href="#跨域脚本错误收集" class="header-anchor">#</a> 跨域脚本错误收集</h3> <p>当你需要统一脚本错误时，使用 crossorigin=&quot;anonymous&quot; 是一种处理跨域脚本加载错误的方法。这个属性告诉浏览器去加载资源的时候不要带上用户的凭据（比如 cookie 或 HTTP 认证信息），这有助于防止跨域请求中的错误导致凭据泄露问题。</p> <p>设置 crossorigin=&quot;anonymous&quot; 可以避免这种情况，因为它告诉浏览器不要发送凭据，这样跨域资源加载时产生的错误就能更容易地被捕获和处理。</p> <h3 id="针对promise的错误收集处理"><a href="#针对promise的错误收集处理" class="header-anchor">#</a> 针对Promise的错误收集处理</h3> <p>当处理 JavaScript 中的 Promise 错误时，养成在每个语句之后添加 catch 函数的习惯是一个很好的实践。这样可以更好地捕获和处理可能发生的异常，保证代码的健壮性和可靠性。</p> <p>使用 ESLint 可以帮助规范代码风格，确保这种习惯得到贯彻执行。可以配置 ESLint 来强制执行在每个 Promise 链式调用中都包含 catch 函数，以确保错误不被忽视。</p> <h3 id="处理网络加载错误"><a href="#处理网络加载错误" class="header-anchor">#</a> 处理网络加载错误</h3> <p>当使用 &lt;script&gt; 或 &lt;link&gt; 标签加载脚本或其他资源时，处理网络加载错误可以通过 window.addEventListener('error') 方法来实现。网络加载错误是指由于服务器问题、网络不稳定或资源不存在等原因导致请求失败的情况。</p> <p>你可以针对元素添加 error 事件监听器来捕获加载异常，然后进行相应的处理。例如：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span>tagName <span class="token operator">===</span> <span class="token string">'SCRIPT'</span> <span class="token operator">||</span> target<span class="token punctuation">.</span>tagName <span class="token operator">===</span> <span class="token string">'LINK'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'资源加载失败:'</span><span class="token punctuation">,</span> target<span class="token punctuation">.</span>src <span class="token operator">||</span> target<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 进行错误处理或其他操作</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这段代码会监听全局的 error 事件，当资源加载失败时，会触发该事件，其中 event.target 可以获取触发错误的元素，通过检查标签名和对应的资源地址，可以识别加载失败的资源，并进行相应的错误处理或记录。</p> <h3 id="页面崩溃错误收集"><a href="#页面崩溃错误收集" class="header-anchor">#</a> 页面崩溃错误收集</h3> <p>当构建一个成熟的系统时，除了处理 JavaScript 错误外，还需要收集页面崩溃和卡顿等信息，以便更全面地监控和改善用户体验。对于页面崩溃和卡顿信息的收集，可以结合监听 window 对象的 load 和 beforeunload 事件，并利用本地存储来实施监控。</p> <p>通过监听 load 和 beforeunload 事件，并结合本地存储，可以收集页面崩溃和卡顿等信息，为系统的稳定性和用户体验提供更全面的监控和改进。</p> <h2 id="性能数据和错误信息上报"><a href="#性能数据和错误信息上报" class="header-anchor">#</a> 性能数据和错误信息上报</h2> <ol><li>单域名上报
+<ul><li>使用单域名，可以防止对主业务服务器造成压力，能够避免日志相关处理逻辑和数据在主业务服务器上的堆积。</li></ul></li> <li>上报时机
+页面加载性能数据可以在页面稳定后进行上报，一般有如下 4 种常见。
+<ul><li>页面加载和重新刷新</li> <li>页面路由切换</li> <li>页面所在的 tab 标签重新变的可见</li> <li>页面关闭</li></ul></li></ol> <ul><li><p>针对单应用上报，只需监听hashchange事件监听路由变化进行适时上报；而如果是通过history API 改变URL实现，需要使用 pushState 和 replaceState 事件进行适时上报。</p></li> <li><p>针对离开页面数据收集页面跳转不流程问题</p></li></ul> <p>推荐 sendBeacon 方法，navigator.sendBeacon 行为是异步的，在没有极端数据量和队列综述的限制下，会优先返回 true 以保证请求成功发送。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/tools/business/x-cli.html" class="prev">国产化模版规范</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/web/tools/assets/js/app.988a242c.js" defer></script><script src="/web/tools/assets/js/2.a48c46d0.js" defer></script><script src="/web/tools/assets/js/9.d4913985.js" defer></script>
+  </body>
+</html>

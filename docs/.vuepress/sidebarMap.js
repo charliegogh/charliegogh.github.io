@@ -1,10 +1,8 @@
 const sidebarMap = [
-    { title: "最近阅读", dirname: "diary" },
+    { title: "组件应用", dirname: "components" },
     { title: "工具", dirname: "tools" },
     { title: "业务应用", dirname: "business" },
-    { title: "vue", dirname: "vue" },
-    { title: "js", dirname: "js" },
-    { title: "开发规范", dirname: "standard" }
+    { title: "docker", dirname: "docker" },
     ];
 
 module.exports = sidebarMap;

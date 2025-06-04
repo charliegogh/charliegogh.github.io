@@ -1,9 +1,9 @@
 const utils = require("./utils");
 module.exports = {
-  title: "charlie",  // 网站标题
-  description: 'charlie',     // 网站描述
+  base:'/web/tools/',
+  title: "知网研学",  // 网站标题
+  description: ' ',     // 网站描述
   head: [
-    ['link', { rel: 'icon', href: './favicon.ico' }],
     ['script', {}, `
        var _hmt = _hmt || [];
       (function() {
@@ -14,17 +14,12 @@ module.exports = {
       })();
         `]
   ],
-  themeConfig: { // 主题配置
+  themeConfig: {
     nav: [
-      { text: "最近阅读", link: "/diary/" },
-      { text: "vue", link: "/vue/api" },
-      { text: "js", link: "/js/useful" },
-      { text: "业务应用", link: "/business/article" },
-      { text: "网站", link: "/website/" },
-      // { text: "工具", link: "/tools/git" },
-      // { text: "库", link: "/repository/" },
-      { text: "开发规范", link: "/standard/" },
-      { text: "面试大纲", link: "/interview/" }
+      { text: "组件应用", link: "/components/" },
+      { text: "工具", link: "/tools/x-sdk.html" },
+      { text: "业务应用", link: "/business/" },
+      { text: "docker", link: "/docker/" },
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
