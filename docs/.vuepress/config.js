@@ -1,6 +1,6 @@
 const utils = require("./utils");
 module.exports = {
-  base:'/web/tools/',
+  base:'/web/docs/',
   title: "知网研学",  // 网站标题
   description: ' ',     // 网站描述
   head: [
@@ -16,10 +16,30 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: "组件应用", link: "/components/" },
-      { text: "工具", link: "/tools/x-sdk.html" },
-      { text: "业务应用", link: "/business/" },
-      { text: "docker", link: "/docker/" },
+      { text: '前端构建', link: '/build-tools/' },
+      { text: '应用部署', link: '/deployment/' },
+      {
+        text: '开发资源',
+        items: [
+          { text: '工具库', link: '/sdk/' },
+          { text: '组件库', link: '/components/' },
+        ]
+      },
+      {
+        text: '规范文档',
+        items: [
+          { text: '代码规范', link: '/linting/' },
+          { text: '设计规范', link: '/ui/' },
+        ]
+      },
+      {
+        text: '运维支持',
+        items: [
+          { text: '性能优化', link: '/performance/' },
+          { text: '数据统计', link: '/statistics/' }
+        ]
+      },
+      { text: '开放平台', link: '/openx/' }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
