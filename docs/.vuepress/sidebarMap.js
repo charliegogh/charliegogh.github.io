@@ -13,6 +13,7 @@ const sidebarMap = [
     { title: "", dirname: "performance" },
     { title: "", dirname: "statistics" },
     { title: "", dirname: "openx" },
+    { title: "", dirname: "java" },
     ];
 
 module.exports = sidebarMap;

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "vuepress build docs && node zip.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "bash deploy.sh"
   },
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "archiver": "^6.0.1",
     "vuepress": "^1.2.0",
     "vuepress-plugin-auto-sidebar": "^1.5.0",
     "@vue/component-compiler-utils": "^3.3.0"

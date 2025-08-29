@@ -39,7 +39,8 @@ module.exports = {
           { text: '数据统计', link: '/statistics/' }
         ]
       },
-      { text: '开放平台', link: '/openx/' }
+      { text: '开放平台', link: '/openx/' },
+      { text: 'java服务应用', link: '/java/' }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
